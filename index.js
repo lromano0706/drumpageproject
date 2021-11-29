@@ -5,7 +5,7 @@ for (var i = 0; i < document.querySelectorAll('.drum').length; i++) {
     makeSound(buttonInnerHTML);
   });
 }
-// adding an event listiner when a key is presed on the Keyboard
+// adding an event listener when a key is presed on the Keyboard
 document.addEventListener('keydown', function (event) {
   console.log(event);
   makeSound(event.key);
