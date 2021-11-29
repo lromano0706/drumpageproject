@@ -1,15 +1,17 @@
+// iterating through buttons and adding a click listener to each button
 for (var i = 0; i < document.querySelectorAll('.drum').length; i++) {
   document.querySelectorAll('.drum')[i].addEventListener('click', function () {
     buttonInnerHTML = this.innerHTML;
     makeSound(buttonInnerHTML);
   });
 }
-
+// adding an event listiner when a key is presed on the Keyboard
 document.addEventListener('keydown', function (event) {
   console.log(event);
   makeSound(event.key);
 });
 
+// function that will pick what sound to play, function is on both event listeners above
 function makeSound(key) {
   switch (key) {
     case 'w':
